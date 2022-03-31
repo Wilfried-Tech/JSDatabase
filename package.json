@@ -1,5 +1,5 @@
 {
-  "name": "database",
+  "name": "JSDatabase",
   "version": "1.0.0",
   "description": "Usefull module for communicate with database on client side with javascript ",
   "main": "src/index.js",
@@ -7,7 +7,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo test"
+    "test": "echo test",
+    "watch": "webpack --watch",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -24,7 +26,7 @@
     "DB"
   ],
   "author": "Wilfried-Tech <wilfriedlarry63@gmail.com> (https://github.com/Wilfried-Tech/JSDatabase)",
-  "license": "UNLICENCED",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Wilfried-Tech/JSDatabase/issues"
   },

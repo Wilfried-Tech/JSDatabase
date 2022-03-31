@@ -3,8 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const config = {
   mode: 'development',
-  entry: './src/index.js',
-  devtool: 'inline-source-map',
+  entry: './src/indexjs',
+//  devtool: 'inline-source-map',
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'databasejs.js',
