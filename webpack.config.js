@@ -1,18 +1,18 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const config = {
+module.exports = {
   mode: 'development',
-  entry: './src/indexjs',
-//  devtool: 'inline-source-map',
+  entry: './src/index.js',
+  devtool: 'none',
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'databasejs.js',
+    filename: 'JSDatabase.js',
     clean: true
   },
   plugins: [new HtmlWebpackPlugin({
       title: 'Development',
-      filename: './test/index.html',
+      filename: '../test/index.html',
       template: './test/template/index.html',
       scriptLoading: 'blocking'
     }),
