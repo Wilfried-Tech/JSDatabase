@@ -1,4 +1,4 @@
-import ok from 'utils.js'
+import ok from './utils.js'
 
 window.DatabaseJS = {
   ok:ok
