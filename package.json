@@ -1,0 +1,32 @@
+{
+  "name": "database",
+  "version": "1.0.0",
+  "description": "Usefull module for communicate with database on client side with javascript ",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wilfried-Tech/JSDatabase.git"
+  },
+  "keywords": [
+    "Database",
+    "JSDatabase",
+    "DatabaseJS",
+    "DB",
+    "Web",
+    "Database",
+    "Web",
+    "DB"
+  ],
+  "author": "Wilfried-Tech <wilfriedlarry63@gmail.com> (https://github.com/Wilfried-Tech/JSDatabase)",
+  "license": "UNLICENCED",
+  "bugs": {
+    "url": "https://github.com/Wilfried-Tech/JSDatabase/issues"
+  },
+  "homepage": "https://github.com/Wilfried-Tech/JSDatabase#readme"
+}
