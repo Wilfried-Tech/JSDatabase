@@ -1,7 +1,7 @@
 import { openDatabase, dropDatabase } from './DatabaseMethod.js'
 import { fullSupportDatabases } from './utils'
 
-if (!fullSupportDatabases()) {
+if (fullSupportDatabases()) {
   window.DatabaseJS = {
     openOrCreate: openDatabase,
     dropDatabase: dropDatabase,
