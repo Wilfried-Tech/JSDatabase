@@ -282,7 +282,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-if (!(0,_utils__WEBPACK_IMPORTED_MODULE_1__.fullSupportDatabases)()) {
+if ((0,_utils__WEBPACK_IMPORTED_MODULE_1__.fullSupportDatabases)()) {
   window.DatabaseJS = {
     openOrCreate: _DatabaseMethod_js__WEBPACK_IMPORTED_MODULE_0__.openDatabase,
     dropDatabase: _DatabaseMethod_js__WEBPACK_IMPORTED_MODULE_0__.dropDatabase,
