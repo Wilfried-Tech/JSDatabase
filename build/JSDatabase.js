@@ -158,6 +158,8 @@ function dropDatabase(dbname) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "fullSupportDatabases": () => (/* binding */ fullSupportDatabases),
+/* harmony export */   "merge": () => (/* binding */ merge),
+/* harmony export */   "type": () => (/* binding */ type),
 /* harmony export */   "reject": () => (/* reexport safe */ _promise_js__WEBPACK_IMPORTED_MODULE_0__.reject),
 /* harmony export */   "resolve": () => (/* reexport safe */ _promise_js__WEBPACK_IMPORTED_MODULE_0__.resolve)
 /* harmony export */ });
@@ -174,6 +176,36 @@ function fullSupportDatabases() {
   }
 
   return !window.indexedDB ? false : true;
+}
+/**
+ * merge two or more object
+ * @param {Array<Object>} args
+ * @return {Object}
+ */
+
+function merge(args) {
+  if (args.length) {
+    var obj = {};
+
+    for (var i = 0; i < args.length; i++) {
+      Object.keys(args[i]).forEach(function (key) {
+        obj[key] = args[i][key];
+      });
+    }
+
+    return obj;
+  }
+}
+/**
+ * return the type of his parameter
+ * @param {*} arg variable
+ * @returns {String} 
+ */
+
+function type(arg) {
+  var s = Object.prototype.toString.call(arg);
+  /\[object (\w+)\]/i.exec(s);
+  return RegExp.$1.replace(/HTML|Element/g, '').toLowerCase();
 }
 
 
