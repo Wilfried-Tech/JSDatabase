@@ -8,7 +8,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '../build'),
     filename: 'JSDatabase.js',
-    clean: true
+    clean: true,
+    library: 'DatabaseJS',
+    libraryTarget: 'var'
   },
   plugins: [new HtmlWebpackPlugin({
       title: 'Development',
@@ -32,11 +34,10 @@ module.exports = {
       {
         test: /\.ts$/,
         use: ['ts-loader'],
-        
       }
     ]
   },
-  resolve:{
-    extensions: ['','.ts','.js']
+  resolve: {
+    extensions: ['', '.ts', '.js']
   }
 };

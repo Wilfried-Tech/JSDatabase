@@ -1,3 +1,4 @@
+var DatabaseJS;
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 var __webpack_exports__ = {};
@@ -5,8 +6,7 @@ var __webpack_exports__ = {};
   !*** ./src/index.ts ***!
   \**********************/
 
-console.log('ok ts');
 
+DatabaseJS = __webpack_exports__;
 /******/ })()
 ;
-//# sourceMappingURL=JSDatabase.js.map
