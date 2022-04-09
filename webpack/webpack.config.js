@@ -3,10 +3,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: './src/index.ts',
   devtool: 'source-map',
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, '../build'),
     filename: 'JSDatabase.js',
     clean: true
   },
@@ -31,8 +31,12 @@ module.exports = {
       },
       {
         test: /\.ts$/,
-        use: ['ts-loader']
+        use: ['ts-loader'],
+        
       }
     ]
+  },
+  resolve:{
+    extensions: ['','.ts','.js']
   }
 };

@@ -8,8 +8,8 @@
   },
   "scripts": {
     "test": "echo test",
-    "watch": "webpack --watch",
-    "build": "webpack"
+    "watch": "webpack --watch --config webpack/webpack.config.js",
+    "build": "webpack --config webpack/webpack.config.js"
   },
   "repository": {
     "type": "git",
