@@ -2,7 +2,7 @@
   "name": "JSDatabase",
   "version": "1.0.0",
   "description": "Usefull module for communicate with database on client side with javascript ",
-  "main": "src/index.js",
+  "main": "src/index.ts",
   "directories": {
     "test": "test"
   },
