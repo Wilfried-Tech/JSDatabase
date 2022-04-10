@@ -1,4 +1,9 @@
-import { resolve } from "@src/utils/promise"
+import { fullSupportDatabases } from './utils'
+import Error_Msg from './constants/'
 
-console.log('ok');
-resolve('ok')
+
+export function Connect() {
+  if(!fullSupportDatabases){
+    throw new Error(Error_Msg.UNSUPPORTED_DB)
+  }
+}

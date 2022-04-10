@@ -1,63 +1,7 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
-/******/ 	var __webpack_modules__ = ({
-
-/***/ "./src/utils/promise.ts":
-/*!******************************!*\
-  !*** ./src/utils/promise.ts ***!
-  \******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "resolve": () => (/* binding */ resolve),
-/* harmony export */   "reject": () => (/* binding */ reject)
-/* harmony export */ });
-/**
- * resolve a promise
- * @param {Object} response value to resolve
- * @returns {Promise<Object>}
- */
-function resolve(response) {
-    return new Promise((_resolve) => { _resolve(response); });
-}
-/**
- * reject a promise
- * @param {Object} reason value to resolve
- * @returns {Promise<void>}
- */
-function reject(reason) {
-    return new Promise((_reject) => { _reject(reason); });
-}
-
-
-/***/ })
-
-/******/ 	});
-/************************************************************************/
-/******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
-/******/ 	
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/ 		// Check if module is in cache
-/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
-/******/ 		if (cachedModule !== undefined) {
-/******/ 			return cachedModule.exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
-/******/ 			// no module.loaded needed
-/******/ 			exports: {}
-/******/ 		};
-/******/ 	
-/******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
+/******/ 	// The require scope
+/******/ 	var __webpack_require__ = {};
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/define property getters */
@@ -90,18 +34,16 @@ function reject(reason) {
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
-(() => {
 /*!**********************!*\
   !*** ./src/index.ts ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _src_utils_promise__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @src/utils/promise */ "./src/utils/promise.ts");
-
-console.log('ok');
-(0,_src_utils_promise__WEBPACK_IMPORTED_MODULE_0__.resolve)('ok');
-
-})();
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "fname": () => (/* binding */ fname)
+/* harmony export */ });
+function fname(arg) {
+    // body...
+}
 
 window.DatabaseJS = __webpack_exports__;
 /******/ })()
