@@ -4,7 +4,7 @@
  * @returns {Promise<Object>}
  */
 
-export function resolve(response) {
+export function resolve(response: any) {
   return new Promise((_resolve) => { _resolve(response) })
 }
 
@@ -14,6 +14,6 @@ export function resolve(response) {
  * @returns {Promise<void>}
  */
 
-export function reject(reason) {
+export function reject(reason: any) {
   return new Promise((_reject) => { _reject(reason) })
 }

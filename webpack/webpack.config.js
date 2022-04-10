@@ -10,7 +10,7 @@ module.exports = {
     filename: 'JSDatabase.js',
     clean: true,
     library: 'DatabaseJS',
-    libraryTarget: 'var'
+    libraryTarget: 'window'
   },
   plugins: [new HtmlWebpackPlugin({
       title: 'Development',
@@ -38,6 +38,9 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['', '.ts', '.js']
+    extensions: ['', '.ts', '.js'],
+    alias: {
+      "@src": path.resolve(__dirname,"../src/")
+    }
   }
 };
