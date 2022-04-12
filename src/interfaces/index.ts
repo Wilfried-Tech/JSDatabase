@@ -1,3 +1,0 @@
-interface IError {
-  msg: string,
-}
