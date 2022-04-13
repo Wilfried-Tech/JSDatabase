@@ -9,5 +9,9 @@ export enum DataType {
 }
 
 export enum ERROR {
+  IDB_UNSUPPORTED = "idb_not_supported"
+}
+
+export enum Method{
   
 }

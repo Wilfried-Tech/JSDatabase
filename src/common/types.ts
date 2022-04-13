@@ -4,6 +4,10 @@ export type QueryResult = {
 }
 
 export type QueryRequest = {
-  name: string,
+  name: string
   query: any
+  onResult?: (result?) => void
+  onError?: (err?) => void
 }
+
+

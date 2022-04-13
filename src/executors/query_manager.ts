@@ -11,6 +11,6 @@ export default class QueryManager {
   }
   
   public execute(req: QueryRequest){
-    
+    this.processFinishedCallback("test okay")
   }
 }

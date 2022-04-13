@@ -1,13 +1,13 @@
 import { QueryResult, QueryRequest, IS_WORKER, IDB_SUPPORT } from '@src/common'
 import QueryManager from '@src/executors/query_manager'
 
-export class Connection {
+export default class DatabaseHelper {
 
   private isworker = true;
   private _worker: Worker;
   private queryManager: QueryManager
   private requestQueue: Array < QueryRequest > = [];
-  private requesting = false;
+  private isCodeExecuting = false;
 
   constructor(worker ? : Worker) {
     if (worker) {
@@ -24,17 +24,19 @@ export class Connection {
   }
 
   private onResponse(response: QueryResult) {
-    
+
     this.proceedRequest();
   }
 
-  private addQuery(query: QueryRequest) {
-    this.requestQueue.push(query);
-    this.proceedRequest();
+  protected addQuery < T > (query: QueryRequest) {
+    return new Promise<T>((resolve, reject) => {
+      this.requestQueue.push(query);
+      this.proceedRequest();
+    })
   }
 
   private proceedRequest() {
-    if (!this.requesting) {
+    if (!this.isCodeExecuting) {
       if (this.requestQueue.length != 0) {
         this.postRequest(this.requestQueue.shift() as QueryRequest);
       }
@@ -42,9 +44,9 @@ export class Connection {
   }
 
   private postRequest(query: QueryRequest) {
-    if(IS_WORKER){
+    if (IS_WORKER) {
       this._worker.postMessage(query);
-    }else{
+    } else {
       this.queryManager.execute(query);
     }
   }
